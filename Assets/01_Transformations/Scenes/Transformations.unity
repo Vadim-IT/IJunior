@@ -224,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316760732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 1.5, z: 20}
+  m_LocalPosition: {x: -20, y: 1.5, z: 20}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -240,10 +240,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 316760732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6a5d0055f464344b8e9a8f5db1ec28, type: 3}
+  m_Script: {fileID: 11500000, guid: 52094856f48acac40aefcc4972978cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 0.01
 --- !u!1 &749999285
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,8 +344,8 @@ Transform:
   m_GameObject: {fileID: 749999285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 25, y: 5, z: 10}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -567,7 +567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385594545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 1, z: -15}
+  m_LocalPosition: {x: 35.1, y: 2, z: -15}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1385594545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ab33ee59af61c429f8cf97eb5d81a2, type: 3}
+  m_Script: {fileID: 11500000, guid: a99c165592aa1f343afb9033122ba595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 200
@@ -685,14 +685,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408423803}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 1, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -100, y: 2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1408423808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,9 +702,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408423803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb37cbc20df393f429f263e8a20810e8, type: 3}
+  m_Script: {fileID: 11500000, guid: b2bd3daf62a74f34d95227bb14a08898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 0.2
 --- !u!1 &1588749507
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,9 +718,9 @@ GameObject:
   - component: {fileID: 1588749510}
   - component: {fileID: 1588749509}
   - component: {fileID: 1588749508}
+  - component: {fileID: 1588749514}
   - component: {fileID: 1588749513}
   - component: {fileID: 1588749512}
-  - component: {fileID: 1588749514}
   m_Layer: 0
   m_Name: Combo Cube
   m_TagString: Untagged
@@ -806,7 +807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588749507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40, y: 1, z: 0}
+  m_LocalPosition: {x: 8.8, y: 2, z: -9.4}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -822,7 +823,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588749507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ab33ee59af61c429f8cf97eb5d81a2, type: 3}
+  m_Script: {fileID: 11500000, guid: a99c165592aa1f343afb9033122ba595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 50
@@ -835,10 +836,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588749507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6a5d0055f464344b8e9a8f5db1ec28, type: 3}
+  m_Script: {fileID: 11500000, guid: b2bd3daf62a74f34d95227bb14a08898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.3
+  _speed: 0.4
 --- !u!114 &1588749514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,10 +849,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588749507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802f5e19660bfd348b4ad90d782edadf, type: 3}
+  m_Script: {fileID: 11500000, guid: 52094856f48acac40aefcc4972978cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 0.01
 --- !u!1 &2112710600
 GameObject:
   m_ObjectHideFlags: 0
