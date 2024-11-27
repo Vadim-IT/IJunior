@@ -1,23 +1,21 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.UI;
 
-public class Reckon : MonoBehaviour
+public class Stopwatch : MonoBehaviour
 {
-    [SerializeField] private Text _counterText;
-
     private float _counterValue;
     private bool _isWork;
+
+    public static event Action<float> ChangingText;
 
     private void Start()
     {
         _counterValue = 0;
-        _counterText.text = _counterValue.ToString();
         _isWork = false;
     }
 
-    public void StartReckon()
+    public void StartStopwatch()
     {
         if (_isWork == false)
         {
@@ -38,8 +36,8 @@ public class Reckon : MonoBehaviour
 
         while (true)
         {
-            _counterValue += waitTime;
-            _counterText.text = _counterValue.ToString();
+            _counterValue ++;
+            ChangingText?.Invoke(_counterValue);
             yield return wait;
         }        
     }

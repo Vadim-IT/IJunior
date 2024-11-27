@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 1838844072}
   - component: {fileID: 1838844071}
   - component: {fileID: 1838844073}
+  - component: {fileID: 1838844074}
   m_Layer: 5
   m_Name: Counter
   m_TagString: Untagged
@@ -723,6 +724,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9e467ab1c35794a907b8528b446201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1838844074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838844069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723c72c6f32035f4c8c790360524d98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _counterText: {fileID: 1838844071}
 --- !u!1 &2020222656
 GameObject:
@@ -736,7 +749,6 @@ GameObject:
   - component: {fileID: 2020222660}
   - component: {fileID: 2020222659}
   - component: {fileID: 2020222658}
-  - component: {fileID: 2020222661}
   m_Layer: 5
   m_Name: Button Play
   m_TagString: Untagged
@@ -810,8 +822,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1838844073}
-        m_TargetAssemblyTypeName: Reckon, Assembly-CSharp
-        m_MethodName: StartReckon
+        m_TargetAssemblyTypeName: Stopwatch, Assembly-CSharp
+        m_MethodName: StartStopwatch
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -859,16 +871,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020222656}
   m_CullTransparentMesh: 1
---- !u!114 &2020222661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020222656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9e467ab1c35794a907b8528b446201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _counterText: {fileID: 1838844071}
