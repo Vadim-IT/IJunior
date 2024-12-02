@@ -5,7 +5,7 @@ public class ChooseObject : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private Ray _ray;
         
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
