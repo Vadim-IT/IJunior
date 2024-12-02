@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class Divider : MonoBehaviour
 {
-    private float radius = 40f;
-    private float force = 1000f;
-
+    public float Radius = 100f;
+    public float Force = 250f;
     public float ChanceSeparation = 100;
 
     public void UseActions()
@@ -22,6 +21,8 @@ public class Divider : MonoBehaviour
 
         if (value < ChanceSeparation)
             CreateCubes();
+        else
+            Explode();
     }
 
     private void CreateCubes()
@@ -33,6 +34,8 @@ public class Divider : MonoBehaviour
 
         gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x / 2f, gameObject.transform.localScale.y / 2f, gameObject.transform.localScale.z / 2f);
         gameObject.GetComponent<Divider>().ChanceSeparation /= 2;
+        gameObject.GetComponent<Divider>().Radius *= 2;
+        gameObject.GetComponent<Divider>().Force *= 2;
 
         for (int i = 0; i < value; i++)
         {
@@ -52,7 +55,22 @@ public class Divider : MonoBehaviour
             Rigidbody rigidbody = explodeColliders[i].attachedRigidbody;
             if (rigidbody)
             {
-                rigidbody.AddExplosionForce(force, transform.position, radius);
+                rigidbody.AddExplosionForce(Force, transform.position, Radius);
+            }
+        }
+    }
+
+    private void Explode()
+    {
+        Collider[] explodeColliders = Physics.OverlapSphere(transform.position, Radius);
+
+        for (int i = 0; i < explodeColliders.Length; i++)
+        {
+            Rigidbody rigidbody = explodeColliders[i].attachedRigidbody;
+
+            if (rigidbody)
+            {
+                rigidbody.AddExplosionForce(Force, transform.position, Radius);
             }
         }
     }
