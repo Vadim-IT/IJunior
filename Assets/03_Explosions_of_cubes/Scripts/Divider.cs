@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Exploder))]
+[RequireComponent(typeof(CubesCreater))]
 public class Divider : MonoBehaviour
 {
     public float Radius = 100f;
@@ -19,8 +21,8 @@ public class Divider : MonoBehaviour
         int value = Random.Range(minValue, maxValue);
 
         if (value < ChanceSeparation)
-            gameObject.GetComponent<Exploder>().Explode(Radius, Force, gameObject.GetComponent<CubesCreater>().CreateCubes());
+            GetComponent<Exploder>().Explode(Radius, Force, GetComponent<CubesCreater>().CreateCubes());
         else
-            gameObject.GetComponent<Exploder>().Explode(Radius, Force);
+            GetComponent<Exploder>().Explode(Radius, Force);
     }    
 }
