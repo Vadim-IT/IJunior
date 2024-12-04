@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChooseObject : MonoBehaviour
+public class ObjectChoose : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private Ray _ray;
@@ -11,9 +11,9 @@ public class ChooseObject : MonoBehaviour
         {
             GameObject objectHit = FindObject();
 
-            if (objectHit.GetComponent<Divider>())
+            if (objectHit.TryGetComponent<Divider>(out Divider divider))
             {
-                objectHit.GetComponent<Divider>().UseActions();
+                divider.UseActions();
             }
         }
     }
